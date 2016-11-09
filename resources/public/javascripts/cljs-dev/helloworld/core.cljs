@@ -1,5 +1,8 @@
-(ns helloworld.core)
+(ns helloworld.core
+  (:require [reagent.core :as reagent]))
 
-(defn say-hello []
-  (js/console.log "Hello Clojurescript"))
-(say-hello)
+(defn app []
+  [:div {}
+    ])
+
+(reagent/render [app] (js/document.querySelector "#cljs-target"))
